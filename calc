@@ -1,21 +1,25 @@
 #very basic Elizabeth Zimmerman percentage system calculater
 
-#gauge per inch
-gauge=int(input('What is your gauge?(stitches/inch)'))
-#chest measurement at largest point
-chest=int(input('What is your chest measurement? (in inches)'))
-#total stitches needed at largest point: 100%
-totalStitches=round(gauge*chest)
-print('Number of body stitches: ' + str(totalStitches))
-#stitches at neck: 40%
-stitchesNeck=round(int(totalStitches)*.4)
-print('Number of stitches at neck: '+str(stitchesNeck))
-#stitches per sleeve: 30%
-stitchesPerSleeve=round(int(totalStitches)*.3)
-print('Number of stitches per sleeve: '+ str(stitchesPerSleeve))
-#stitches at cuff: 20%
-stitchesAtCuff=round(int(totalStitches)*.2)
-print('Number of stitches at cuff: '+str(stitchesAtCuff))
-#stitches at hem: 90%
-stitchesAtHem=round(int(totalStitches)*.9)
-print('Number of stitches at hem: '+ str(stitchesAtHem))
+begin=input('Do you have a swatch? Y/N ')
+if begin=='Y':
+    #gauge per inch
+    gauge=int(input('What is your gauge in stitches/inch)? '))
+    #chest measurement at largest point
+    chest=int(input('What is your chest measurement in inches? '))
+    #total stitches needed at largest point: 100%
+    totalStitches=round(gauge*chest)
+    print('Number of body stitches: ' + str(totalStitches))
+    #stitches at neck: 40%
+    stitchesNeck=round(int(totalStitches)*.4)
+    print('Number of stitches at neck: '+str(stitchesNeck))
+    #stitches per sleeve: 30%
+    stitchesPerSleeve=round(int(totalStitches)*.3)
+    print('Number of stitches per sleeve: '+ str(stitchesPerSleeve))
+    #stitches at cuff: 20%
+    stitchesAtCuff=round(int(totalStitches)*.2)
+    print('Number of stitches at cuff: '+str(stitchesAtCuff))
+    #stitches at hem: 90%
+    stitchesAtHem=round(int(totalStitches)*.9)
+    print('Number of stitches at hem: '+ str(stitchesAtHem))
+else:
+    print('Swatch first then come back!')
